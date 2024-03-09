@@ -2,6 +2,13 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+//Importing Components
+import Navbar from './components/Navbar/Navbar'
+// import HomePage from './components/HomePage'
+// import AboutUs from './components/AboutUs'
+// import Menu from './components/Menu'
+// import ContactPage from './components/ContactPage'
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -15,12 +22,11 @@ function App() {
   return (
     <>
       <div className='overflow-x-hidden'>
-        App
         <Navbar />
-        <HomePage />
+        {/* <HomePage />
         <AboutUs />
         <Menu />
-        <ContactPage />
+        <ContactPage /> */}
       </div>
     </>
   )
