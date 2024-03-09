@@ -13,7 +13,8 @@ export default {
       primary: "#994D1C",
       secondary: "#E48F45",
       darkBrand: "#6B240C",
-      lightBrand: "#F5CCA0"
+      lightBrand: "#F5CCA0",
+      CustomColor: "#EEF5FF"
 
     },
     container: {

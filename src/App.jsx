@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 
 //Importing Components
 import Navbar from './components/Navbar/Navbar'
-// import HomePage from './components/HomePage'
+import Home from './components/Home/Homepage'
 // import AboutUs from './components/AboutUs'
 // import Menu from './components/Menu'
 // import ContactPage from './components/ContactPage'
@@ -23,10 +23,7 @@ function App() {
     <>
       <div className='overflow-x-hidden'>
         <Navbar />
-        {/* <HomePage />
-        <AboutUs />
-        <Menu />
-        <ContactPage /> */}
+        <Home />
       </div>
     </>
   )

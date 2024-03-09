@@ -1,5 +1,6 @@
 import React from 'react'
 import JavaLogo from '../../assets/images/JavaLogo.png'
+import { FaCoffee } from 'react-icons/fa'
 
 const Menus = [
   {
@@ -28,29 +29,30 @@ const Navbar = () => {
   return (
     <div>
       <div className='bg-gradient-to-r from-secondary to-secondary/90'>
-        <div className='container py-2'>
+        <div className='container py-2 flex items-center justify-between'>
           <div className='flex'>
             {/* logo section */}
-            <div className=''>
-              <a href='#'>
-                <img src={JavaLogo} alt='JavaCoffee' className='w-40' />
-              </a>
-            </div>
 
-            {/* navlinks */}
-            <div>
-              <ul className='hidden sm:flex items-center gap-4'>
-                {Menus.map((data, index) => (
-                  <li key={index}>
-                    <a href={data.link} className=''>
-                      {data.name}
-                    </a>
-                  </li>
-                ))}
-                <li></li>
-                <btton>Order Now</btton>
-              </ul>
-            </div>
+            <a href='#'>
+              <img src={JavaLogo} alt='JavaCoffee' className='w-40' />
+            </a>
+          </div>
+
+          {/* navlinks */}
+          <div className='flex gap-4 '>
+            <ul className='hidden sm:flex items-center gap-4 text-CustomColor'>
+              {Menus.map((data, index) => (
+                <li key={index}>
+                  <a href={data.link} className='inline-block text-xl py-y px-4 hover: text-CustomColor duration-200'>
+                    {data.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button className='bg-secondary/100 px-4 py-2 rounded-full hover:scale-105 duration-200 text-CustomColor flex item-center gap-3'>
+              Order
+              <FaCoffee className='text-xl cursor-pointer' />
+            </button>
           </div>
         </div>
       </div>
