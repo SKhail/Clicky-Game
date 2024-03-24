@@ -1,30 +1,28 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Importing Components
-import Navbar from './components/Navbar/Navbar'
-import Home from './components/Home/Homepage'
-// import AboutUs from './components/AboutUs'
-// import Menu from './components/Menu'
-// import ContactPage from './components/ContactPage'
+import Navbar from './components/navigation/Navbar'
+import Home from './components/home/Homepage'
+import AboutUs from './components/AboutUs'
+import Menu from './components/Menu'
+import ContactPage from './components/ContactPage'
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 700,
-      easing: 'ease',
-      delay: 100,
-    })
-  })
-
   return (
     <>
-      <div className='overflow-x-hidden'>
-        <Navbar />
-        <Home />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/Home' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='blogs' element={<Blogs />} />
+            <Route path='contact' element={<Contact />} />
+            <Route path='*' element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
