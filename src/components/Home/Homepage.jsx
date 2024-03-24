@@ -1,11 +1,14 @@
-import React from 'react'
-import Navbar from './components/navigation/Navbar'
+import React from 'react';
+// import Navbar from './components/navigation/Navbar'
+
+// import '../home/Homepage.css'
 
 export const Homepage = () => {
-  return
-  ;<div>
-    <Navbar />
-  </div>
-}
+  return (
+    <>
+      <div className='bg-cover'></div>
+    </>
+  );
+};
 
-export default Homepage
+export default Homepage;

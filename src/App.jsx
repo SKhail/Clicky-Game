@@ -1,28 +1,34 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //Importing Components
-import Navbar from './components/navigation/Navbar'
 import Home from './components/home/Homepage'
-import AboutUs from './components/AboutUs'
-import Menu from './components/Menu'
-import ContactPage from './components/ContactPage'
+import Navigation from './components/navigation/Navbar'
+import About from './components/about/About'
+import Shop from './components/shop/Shop'
+import Menu from './components/menu/CoffeeMenu'
+import Blog from './components/blog/Blog'
+import OurMenu from './components/ourmenu/OurMenu'
+import ContactPage from './components/contactpage/ContactPage'
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
+        <Navigation />
         <Routes>
-          <Route path='/Home' element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path='blogs' element={<Blogs />} />
-            <Route path='contact' element={<Contact />} />
-            <Route path='*' element={<NoPage />} />
+          <Route path='/' element={<Home />}>
+            <Route path='/about' element={<About />} />
+            <Route path='/shop' element={<Shop />} />
+
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/ourmenu' element={<OurMenu />} />
+            <Route path='/menu' element={<Menu />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   )
 }
