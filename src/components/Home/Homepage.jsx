@@ -1,14 +1,8 @@
 import React from 'react';
-// import Navbar from './components/navigation/Navbar'
-
-// import '../home/Homepage.css'
+import '../home/Home.css';
 
 export const Homepage = () => {
-  return (
-    <>
-      <div className='bg-cover'></div>
-    </>
-  );
+  return <></>;
 };
 
 export default Homepage;
