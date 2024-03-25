@@ -1,0 +1,10 @@
+/* Logo */
+.img-logo {
+  z-index: 2;
+  margin-left: 60px;
+}
+
+/* navigation */
+.nav-bar {
+  z-index: 2;
+}

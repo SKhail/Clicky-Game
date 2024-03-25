@@ -6,10 +6,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"]
+        'sans': ['Noto Sans', 'Poppins', 'Tauri', 'ui-sans-serif', 'system-ui'],
       }
     },
     colors: {
+      customWhite: '#ffffff',
 
 
     },
