@@ -1,4 +1,5 @@
 import React from 'react';
+
 import JavaLogo from '../../assets/images/JavaLogo.png';
 import '../herosection/HeroSection.css';
 const HeroSection = () => {
@@ -6,7 +7,7 @@ const HeroSection = () => {
     <div className='flex justify-center items-center h-screen'>
       <div className='text-center'>
         {/* logo */}
-        <div className='flex justify-center items-center py-2'>
+        <div className='flex justify-center items-center'>
           <img src={JavaLogo} alt='JavaCoffee' className='sm:w-1/4 md:w-1/5 lg:w-1/7 xl:w-1/7 object-cover' />
         </div>
         {/* Largest Text */}
@@ -14,11 +15,11 @@ const HeroSection = () => {
           Experience Coffee <br className='hidden sm:block' /> Like Never Before
         </h1>
         {/* Small Text */}
-        <p className='leading-8 font-sans text-customWhite'>
+        <p className='leading-8 font-sans text-customWhite py-5'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure earum iste beatae suscipit necessitatibus ex sed eaque officia natus ducimus!
         </p>
         {/* Button for menu */}
-        <button className='font-sans uppercase bg-customWhite rounded text-sm px-5 py-3.5 me-2 mb-2'>Explore Our Menu</button>
+        <button className='font-rakkas font-bold uppercase bg-customWhite rounded text-sm px-5 py-3.5 me-2 mb-2'>Explore Our Menu</button>
       </div>
     </div>
   );

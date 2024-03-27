@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['Noto Sans', 'Poppins', 'Tauri', 'ui-sans-serif', 'system-ui'],
+        'rakkas': ['Rakkas', 'serif']
       }
     },
     colors: {

@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import '../navigation/Nav.css';
 import JavaLogo from '../../assets/images/JavaLogo.png';
 import { FaShoppingBag } from 'react-icons/fa';
+import '../menu/CoffeeMenu';
 
-const Menus = [
+const NavData = [
   {
     id: 1,
     name: 'Home',
@@ -29,34 +31,35 @@ const Menus = [
     name: 'Blog',
     link: '/blog',
   },
-  {
-    id: 6,
-    icon: <FaShoppingBag />,
-    link: '/shopping',
-  },
 ];
 
 const Navbar = () => {
   return (
     <div>
-      <div className='container py-3 flex items-center justify-between nav-bar'>
-        <div className='img-logo p-5  '>
-          {/* logo section */}
+      <div className='container py-3 flex items-center justify-between'>
+        <Link to='/menu' className='logo-link'>
           <img src={JavaLogo} alt='JavaCoffee' className='w-40' />
-        </div>
-
-        {/* navlinks */}
+        </Link>
         <div className='flex gap-4 nav-bar px-20'>
           <ul className='hidden sm:flex items-center gap-4'>
-            {Menus.map((data, index) => (
+            {NavData.map((data, index) => (
               <li key={index}>
-                <a href={data.link} className='font-sans uppercase py-4 px-4 text-customWhite'>
+                <NavLink to={data.link} className='font-sans uppercase py-4 px-4 text-customWhite'>
                   {data.name}
-                </a>
+                </NavLink>
+                {data.icon && <img src={data.icon} alt='Icon' className='bg-white' />}
               </li>
             ))}
+            {/* shopping cart icon */}
+            <li>
+              <NavLink to='/cart' className='font-sans uppercase py-4 px-4 text-customWhite'>
+                <FaShoppingBag />
+              </NavLink>
+            </li>
           </ul>
-          <button className=' font-sans uppercase bg-customWhite rounded text-sm px-5 py-2.5 me-2 mb-2'>Our Menu</button>
+          <Link to='/CoffeeMenu' className='font-sans uppercase py-4 px-4 pr-3 text-black'>
+            <button className='font-rakkas uppercase bg-customWhite rounded text-sm px-5 py-2.5 me-2 mb-2'>Our Menu</button>
+          </Link>
         </div>
       </div>
     </div>
