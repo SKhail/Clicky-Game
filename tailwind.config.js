@@ -12,7 +12,7 @@ export default {
     },
     colors: {
       customWhite: '#ffffff',
-
+      customHover: '#333333'
 
     },
 

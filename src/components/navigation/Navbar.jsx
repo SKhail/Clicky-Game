@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import '../navigation/Nav.css';
 import JavaLogo from '../../assets/images/JavaLogo.png';
 import { FaShoppingBag } from 'react-icons/fa';
-import '../menu/CoffeeMenu';
+import '../menu/JavaMenu';
 
 const NavData = [
   {
@@ -57,7 +57,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <Link to='/CoffeeMenu' className='font-sans uppercase py-4 px-4 pr-3 text-black'>
+          <Link to='/JavaMenu' className='font-sans uppercase py-4 px-4 pr-3 text-black'>
             <button className='font-rakkas uppercase bg-customWhite rounded text-sm px-5 py-2.5 me-2 mb-2'>Our Menu</button>
           </Link>
         </div>
