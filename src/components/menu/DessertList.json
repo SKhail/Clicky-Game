@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Cheesecake",
+    "description": "Rich and creamy dessert with a graham cracker crust",
+    "image": "cheesecake.jpg",
+    "category": "Desserts"
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Cake",
+    "description": "Moist and decadent chocolate cake with chocolate frosting",
+    "image": "chocolate-cake.jpg",
+    "category": "Desserts"
+  },
+  {
+    "id": 3,
+    "name": "Fruit Tart",
+    "description": "Buttery pastry crust filled with custard and topped with fresh fruit",
+    "image": "fruit-tart.jpg",
+    "category": "Desserts"
+  }
+]

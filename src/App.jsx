@@ -7,7 +7,7 @@ import Home from './components/home/Homepage';
 import Navigation from './components/navigation/Navbar';
 import About from './components/about/About';
 import Shop from './components/shop/Shop';
-import Menu from './components/menu/CoffeeMenu';
+import Menu from './components/menu/JavaMenu';
 import Blog from './components/blog/Blog';
 import OurMenu from './components/ourmenu/OurMenu';
 
@@ -22,7 +22,7 @@ function App() {
           <Route path='/shop' element={<Shop />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/ourmenu' element={<OurMenu />} />
-          <Route path='/CoffeeMenu' element={<Menu />} />
+          <Route path='/JavaMenu' element={<Menu />} />
         </Routes>
       </Router>
     </>

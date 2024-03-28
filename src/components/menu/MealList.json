@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Breakfast Burrito",
+    "description": "Scrambled eggs,  cheese, and salsa wrapped in a tortilla",
+    "image": "breakfast-burrito.jpg",
+    "category": "Meals"
+  },
+  {
+    "id": 2,
+    "name": "Avocado Toast",
+    "description": "Toasted bread topped with mashed avocado, salt, and pepper",
+    "image": "avocado-toast.jpg",
+    "category": "Meals"
+  },
+  {
+    "id": 3,
+    "name": "Chicken Caesar Salad",
+    "description": "Romaine lettuce, grilled chicken, croutons, Parmesan cheese, and Caesar dressing",
+    "image": "caesar-salad.jpg",
+    "category": "Meals"
+  }
+]
