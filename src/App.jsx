@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//Importing Coffee ChatBot
+// import ChatWindow from './components/chatbot/ChatWindow'; // Import from Chat folder
+import ChatInput from './components/chatbot/ChatInput';
+import ChatSidebar from './components/chatbot/ChatSidebar';
+import ChatButton from './components/chatbot/ChatButton';
+import ChatSystem from './components/chatbot/ChatSystem';
 
 //Importing Components
 import Home from './components/home/Homepage';
@@ -12,6 +19,22 @@ import Blog from './components/blog/Blog';
 import OurMenu from './components/ourmenu/OurMenu';
 
 function App() {
+  //UseStates
+  const [showChatSystem, setShowChatSystem] = useState(false);
+  const [messages, setMessages] = useState([]);
+
+  const handleChatButtonClick = () => {
+    setShowChatSystem(true);
+  };
+
+  const handleCloseChat = () => {
+    setShowChatSystem(false);
+  };
+
+  const handleSendMessage = (text) => {
+    setMessages([...messages, { sender: 'Me', text }]);
+  };
+
   return (
     <>
       <Router>
@@ -25,6 +48,11 @@ function App() {
           <Route path='/JavaMenu' element={<Menu />} />
         </Routes>
       </Router>
+
+      <div className='app'>
+        {!showChatSystem && <ChatButton onClick={handleChatButtonClick} />}
+        {showChatSystem && <ChatSystem messages={messages} onSendMessage={handleSendMessage} onClose={handleCloseChat} />}
+      </div>
     </>
   );
 }
