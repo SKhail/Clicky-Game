@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../menu/JavaStyles.css';
+import Navigation from '../navigation/Navbar';
 
 // Json files
 import coffeeData from './CoffeeList.json';
@@ -37,7 +38,8 @@ const CoffeeMenu = ({}) => {
     );
   };
   return (
-    <div className='menuBody'>
+    <div className='menu'>
+      <Navigation />
       <div className='flex justify-center items-center'>
         <div className='text-center'>
           <h1 className='font-rakkas uppercase text-3xl text-customWhite tracking-widest'>MENU</h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 import JavaLogo from '../../assets/images/JavaLogo.png';
 
@@ -25,8 +26,13 @@ const HeroSection = () => {
 
         {/* Button for menu */}
         <div className='py-3'></div>
-        <button className='font-rakkas font-bold uppercase bg-customWhite rounded text-sm px-5 py-3.5 me-2 mb-2'>Explore Our Menu</button>
+        <Link to='/JavaMenu' className='font-sans uppercase py-4 px-4 pr-3 text-black'>
+          <button className='font-rakkas font-bold uppercase bg-customWhite rounded text-sm px-5 py-3.5 me-2 mb-2'>Explore Our Page</button>
+        </Link>
       </div>
+      {/* <Link to='/JavaMenu' className='font-sans uppercase py-4 px-4 pr-3 text-black'>
+        <button className='font-rakkas uppercase bg-customWhite rounded text-sm px-5 py-2.5 me-2 mb-2'>Our Menu</button>
+      </Link> */}
     </div>
   );
 };
