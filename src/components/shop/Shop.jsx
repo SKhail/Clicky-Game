@@ -1,7 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import Navigation from '../navigation/Navbar';
 const Shop = () => {
-  return <div>Shop</div>
-}
+  return (
+    <div>
+      <Navigation />
+    </div>
+  );
+};
 
-export default Shop
+export default Shop;
