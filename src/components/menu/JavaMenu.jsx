@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 import '../menu/JavaStyles.css';
 import Navigation from '../navigation/Navbar';
 
@@ -51,25 +51,17 @@ const CoffeeMenu = ({}) => {
             <button className={`mx-2 px-4 rounded ${activeMenu === 'drinks' ? 'text-customWhite}' : 'bg-gray-200 text-gray-800'}`} onClick={() => setActiveMenu('drinks')}>
               Drinks
             </button>
-            {/* Breakfast Section */}
-            <div className='flex justify-center'>
-              <button className={`mx-2 px-4 rounded ${activeMenu === 'breakfast' ? 'text-customWhite}' : 'bg-gray-200 text-gray-800'}`} onClick={() => setActiveMenu('breakfast')}>
-                Drinks
-              </button>
-
-              {/* Dessert Section */}
-              <div className='flex justify-center'>
-                <button className={`mx-2 px-4 rounded ${activeMenu === 'desserts' ? 'text-customWhite}' : 'bg-gray-200 text-gray-800'}`} onClick={() => setActiveMenu('desserts')}>
-                  Drinks
-                </button>
-              </div>
-
-              {/* Passing each datae to the showMenu */}
-              {activeMenu === 'drinks' && showMenu(coffeeData)}
-              {activeMenu === 'desserts' && showMenu(dessertData)}
-              {activeMenu === 'breakfast' && showMenu(breakfastData)}
-            </div>
+            <button className={`mx-2 px-4 rounded ${activeMenu === 'breakfast' ? 'text-customWhite}' : 'bg-gray-200 text-gray-800'}`} onClick={() => setActiveMenu('breakfast')}>
+              Breakfast
+            </button>
+            <button className={`mx-2 px-4 rounded ${activeMenu === 'desserts' ? 'text-customWhite}' : 'bg-gray-200 text-gray-800'}`} onClick={() => setActiveMenu('desserts')}>
+              Dessert
+            </button>
           </div>
+          {/* Passing each data to the showMenu */}
+          {activeMenu === 'drinks' && showMenu(coffeeData)}
+          {activeMenu === 'desserts' && showMenu(dessertData)}
+          {activeMenu === 'breakfast' && showMenu(breakfastData)}
         </div>
       </div>
     </div>
