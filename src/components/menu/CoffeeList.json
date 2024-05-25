@@ -3,18 +3,21 @@
     "id": 1,
     "name": "Latte",
     "description": "Espresso with steamed milk",
-    "image": "cappuccino.png"
+    "image": "cappuccino.png",
+    "category": "Coffee"
   },
   {
     "id": 2,
     "name": "Cappuccino",
     "description": "Espresso with equal parts steamed milk and milk foam",
-    "image": "cappuccino.png"
+    "image": "cappuccino.png",
+    "category": "Coffee"
   },
   {
     "id": 3,
     "name": "Americano",
     "description": "Espresso coffee",
-    "image": "americano.png"
+    "image": "americano.png",
+    "category": "Coffee"
   }
 ]
